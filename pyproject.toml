@@ -1,0 +1,29 @@
+[project]
+name = "primers"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "comarts", email = "comarts@163.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "ipykernel>=7.3.0",
+]
+
+[project.scripts]
+primers = "primers:main"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 88
+[tool.ruff.lint]
+select = ["A", "B", "C", "D", "E", "F", "I", "N", "Q", "R", "S", "U", "W", "BLE"]
+ignore = ["D203", "D213"]
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = "single"
+multiline-quotes = 'single'
+docstring-quotes = "double"
